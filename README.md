@@ -19,6 +19,8 @@ Outputs arrays to a file in the format:
 3rd array: Length of pause between notes.
 Be sure to point to an existing file, otherwise it will result in an error!
 3) Exit.
+
+
 RUS:
 Эта небольшая утилита преобразует midi-файлы в массивы, читаемые Arduino, посредством промежуточного шага со списком тональной задержки из https://extramaster.net/tools/midiToArduino/.
 Необходимый:
