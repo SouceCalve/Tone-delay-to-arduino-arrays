@@ -7,17 +7,20 @@ Just clone the repository and run)
 Usage:
 python3 conv.py
 And get into mode:
+
 1) Input file:
 It will ask you to enter the path to the file and remember the arrays for output to the file.
 Be sure to remove everything except structures
 tone(tonePin, 659, 83.25);
 delay(92.5);
+
 2) Output to a file.
 Outputs arrays to a file in the format:
 1st array: Notes
 2nd array: Note duration
 3rd array: Length of pause between notes.
 Be sure to point to an existing file, otherwise it will result in an error!
+
 3) Exit.
 
 
@@ -30,6 +33,7 @@ python >= 3.10.10
 Использование:
 python3 conv.py
 И войти в режим:
+
 1) Входной файл:
 Попросит ввести путь до файла и запомнит массивы для вывода в файл.
 Обязательно уберите всё, кроме конструкций
