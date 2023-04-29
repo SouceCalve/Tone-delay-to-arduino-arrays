@@ -5,7 +5,7 @@ python >= 3.10.10
 Installation:
 Just clone the repository and run)
 Usage:
-Enter python3 conv.py
+python3 conv.py
 And get into mode:
 1) Input file:
 It will ask you to enter the path to the file and remember the arrays for output to the file.
@@ -24,11 +24,11 @@ Be sure to point to an existing file, otherwise it will result in an error!
 RUS:
 Эта небольшая утилита преобразует midi-файлы в массивы, читаемые Arduino, посредством промежуточного шага со списком тональной задержки из https://extramaster.net/tools/midiToArduino/.
 Необходимый:
-питон> = 3.10.10
+python >= 3.10.10
 Установка:
 Просто клонируй репозиторий и запускай)
 Использование:
-Введите python3 conv.py
+python3 conv.py
 И войти в режим:
 1) Входной файл:
 Попросит ввести путь до файла и запомнит массивы для вывода в файл.
