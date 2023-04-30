@@ -21,9 +21,9 @@ def parsenotes():
 def output():
         outputfile="./"+input("Выход:")
         f=open(outputfile,"w")
-        f.write(str(notes)+'\n')
-        f.write(str(duration)+'\n')
-        f.write(str(delaynotes)+'\n')
+        f.write(str(notes).replace("'","")+'\n')
+        f.write(str(duration).replace("'","")+'\n')
+        f.write(str(delaynotes).replace("'","")+'\n')
         print("Готово!")
         return
 
