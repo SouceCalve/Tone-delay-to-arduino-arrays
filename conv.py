@@ -1,22 +1,29 @@
 notes=[]
 duration=[]
 delaynotes=[]
+delayprev=False
 def parsenotes():
-        inputfile="./"+input("Вход:")
-        f = open(inputfile)
-        for line in f:
-                parslin=line[4:9]
-                #print(parslin)
-                if parslin=="tone(":
-                        #print("note!",line[18:21])
-                        notes.append(line[18:21])
-                        duration.append(str(line[23:29]).replace(');','',1).replace(')','',1))
-                elif parslin=="delay":
-                        #print("duration",line[10:22])
-                        delaynotes.append(str(line[10:22]).replace(');\n','',1))
-        f.close()
-        print("Готово!")
-        return
+	inputfile="./"+input("Вход:")
+	f = open(inputfile)
+	for line in f:
+		parslin=line[4:9]
+		#print(parslin)
+		if parslin=="tone(":
+			#print("note!",line[18:21])
+			notes.append(line[18:21])
+			duration.append(str(line[23:29]).replace(');','',1).replace(')','',1))
+			delayprev=False
+		elif parslin=="delay":
+			if delayprev==True:
+				#print(line[10:24])
+				delaynotes[-1]=str(float(delaynotes[-1])+float(str(line[10:24]).replace(');','',1).replace(')','',1).replace('\n','')))
+			if delayprev==False:
+				#print("duration",line[10:22])
+				delaynotes.append(str(line[10:24]).replace(');','',1).replace(')','',1).replace('\n','')) #добавить проверку множественых delay'в
+				delayprev=True
+	f.close()
+	print("Готово!")
+	return
 
 def output():
         outputfile="./"+input("Выход:")
